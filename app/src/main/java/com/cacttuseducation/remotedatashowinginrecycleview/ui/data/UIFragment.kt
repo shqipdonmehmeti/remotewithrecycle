@@ -26,13 +26,31 @@ class UIFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvCount.text = viewModel.getCount()
-        binding.btnIncrease.setOnClickListener {
-            viewModel.increaseCount()
-            binding.tvCount.text = viewModel.getCount()
+        viewModel.count.observe(viewLifecycleOwner) {
+            binding.tvCount.text = it.toString()
         }
+        onBtnClickHandler()
     }
 
+
+
+    private fun onBtnClickHandler() {
+        binding.btnIncreaseBy1.setOnClickListener {
+            viewModel.increaseCountBy1()
+        }
+
+        binding.btnDecreaseBy1.setOnClickListener {
+            viewModel.decreaseCountBy1()
+        }
+
+        binding.btnIncreaseBy5.setOnClickListener {
+            viewModel.increaseCountBy5()
+        }
+
+        binding.btnDecreaseBy5.setOnClickListener {
+            viewModel.decreaseCountBy5()
+        }
+    }
 
 
 }

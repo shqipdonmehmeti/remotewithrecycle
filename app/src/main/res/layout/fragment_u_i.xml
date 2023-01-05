@@ -15,10 +15,31 @@
          />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnIncrease"
+        android:id="@+id/btnIncreaseBy1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:text="+1"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDecreaseBy1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIncreaseBy5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+5"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDecreaseBy5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-5"
         />
 
 </LinearLayout>
