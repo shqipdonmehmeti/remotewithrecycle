@@ -33,6 +33,11 @@
         android:name="com.cacttuseducation.remotedatashowinginrecycleview.ui.twowaydatabinding.TwoWayDataBindingFragment"
         android:label="fragment_two_way_data_binding"
         tools:layout="@layout/fragment_two_way_data_binding" />
+    <fragment
+        android:id="@+id/nav_postRequest"
+        android:name="com.cacttuseducation.remotedatashowinginrecycleview.ui.postrequest.PostRequestFragment"
+        android:label="fragment_post_request"
+        tools:layout="@layout/fragment_post_request" />
 
 
 </navigation>

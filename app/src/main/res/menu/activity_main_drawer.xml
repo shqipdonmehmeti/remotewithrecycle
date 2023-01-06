@@ -19,5 +19,10 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="Two way" />
 
+        <item
+            android:id="@+id/nav_postRequest"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Post Request" />
+
     </group>
 </menu>

@@ -10,6 +10,7 @@ class TwoWayDataBindingViewModel : ViewModel() {
     fun updateResult() {
         val value = etInputValue.value?.toInt()
         result.value = value?.let { result.value?.plus(it) }
+
     }
 
 }
