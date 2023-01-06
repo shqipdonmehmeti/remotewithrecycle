@@ -1,45 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.data.UIFragment">
 
-    <TextView
-        android:id="@+id/tvCount"
+<layout>
+        <data>
+            <variable
+                name="uiViewModel"
+                type="com.cacttuseducation.remotedatashowinginrecycleview.ui.data.UIViewModel" />
+        </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textAlignment="center"
-         />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.data.UIFragment">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnIncreaseBy1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+1"
-        />
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@{`` + uiViewModel.count}"
+            android:textSize="30sp" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnDecreaseBy1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="-1"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIncreaseBy1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->uiViewModel.increaseCountBy1()}"
+            android:text="+1" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnIncreaseBy5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+5"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDecreaseBy1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->uiViewModel.decreaseCountBy1()}"
+            android:text="-1" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnDecreaseBy5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="-5"
-        />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIncreaseBy5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->uiViewModel.increaseCountBy5()}"
+            android:text="+5" />
 
-</LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDecreaseBy5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->uiViewModel.decreaseCountBy5()}"
+            android:text="-5" />
+
+        <EditText
+            android:id="@+id/etInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={`` + uiViewModel.count}"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEquals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="="
+            />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.cacttuseducation.remotedatashowinginrecycleview.ui.twowaydatabinding.TwoWayDataBindingViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.twowaydatabinding.TwoWayDataBindingFragment">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:text="@{`` + viewModel.result}" />
+
+        <EditText
+            android:id="@+id/etInputForTwoWay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.etInputValue}"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()-> viewModel.updateResult()}"
+            android:text="="
+            />
+
+    </LinearLayout>
+</layout>

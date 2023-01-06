@@ -28,6 +28,11 @@
         android:name="com.cacttuseducation.remotedatashowinginrecycleview.ui.data.UIFragment"
         android:label="fragment_u_i"
         tools:layout="@layout/fragment_u_i" />
+    <fragment
+        android:id="@+id/nav_twoway"
+        android:name="com.cacttuseducation.remotedatashowinginrecycleview.ui.twowaydatabinding.TwoWayDataBindingFragment"
+        android:label="fragment_two_way_data_binding"
+        tools:layout="@layout/fragment_two_way_data_binding" />
 
 
 </navigation>
